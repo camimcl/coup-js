@@ -22,7 +22,7 @@ const Players: React.FC = () => {
       </div>
       
       <div className="players-grid">
-        {otherPlayers.map((player, idx) => {
+        {otherPlayers.map((player) => {
           const isCurrentTurn = player.uuid === currentPlayerId;
           
           return (

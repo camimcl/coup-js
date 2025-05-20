@@ -4,7 +4,7 @@ import { useSocketContext } from '../../contexts/SocketProvider';
 import { useGameState } from '../../contexts/GameStateProvider';
 import { useMatch } from '../../contexts/MatchProvider';
 import './MatchSetup.css';
-import { EndGameModal } from '../MatchDashboard/MatchDashboard';
+
 
 interface PreConnectProps {
   playerName: string;
