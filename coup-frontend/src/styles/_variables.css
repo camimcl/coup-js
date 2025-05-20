@@ -1,0 +1,14 @@
+:root {
+  --coup-yellow: #FDD835;
+  --coup-red: #C62828;
+  --coup-blue: #1976D2;
+  --coup-green: #388E3C;
+  --coup-purple: #7B1FA2;
+  --coup-orange: #FF8F00;
+  --coup-brown: #8D6E63;
+  --coup-black: #212121;
+  --coup-white: #FFF8E1;
+  --coup-cream: #FFF3C4;
+  --coup-shadow: rgba(0,0,0,0.4);
+  --coup-glow: rgba(253, 216, 53, 0.6);
+}
