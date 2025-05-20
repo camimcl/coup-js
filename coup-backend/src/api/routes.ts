@@ -16,7 +16,7 @@ export const httpServer = http.createServer(app);
 
 const server = new Server(httpServer, {
   cors: {
-    origin: 'https://coup-js.vercel.app',
+    origin: ['https://coup-js.vercel.app', 'http://localhost:5173'],
     methods: ['GET', 'POST'],
     credentials: false,
   },
