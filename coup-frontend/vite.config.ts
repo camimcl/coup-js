@@ -11,12 +11,12 @@ export default defineConfig({
     proxy: {
       // REST endpoints
       '/api': {
-        target: process.env.VITE_API_URL,
+        target: process.env.VITE_API_URL || "https://coup-js-p4xt-git-master-camimcls-projects.vercel.app",
         changeOrigin: true,
       },
       // Socket.IO (WebSocket) endpoint
       '/socket.io': {
-        target: process.env.VITE_API_URL,
+        target: process.env.VITE_API_URL || "https://coup-js-p4xt-git-master-camimcls-projects.vercel.app",
         ws: true,
         changeOrigin: true,
       },
