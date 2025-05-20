@@ -20,7 +20,7 @@ const MatchDashboard: React.FC = () => {
     </div>
 
     {
-      match?.winner && <EndGameModal winnerName={match.winner.name} />
+      match?.winner && <EndGameModal winnerName={match.winner} />
     }
 
     <Players />
@@ -45,7 +45,7 @@ export const EndGameModal: React.FC<{ winnerName: string }> = ({ winnerName }) =
       <div className="waiting-room-card flex flex-col items-center">
         <h1 id='end-game-title' className='cards-title'>{winnerName} VENCEU!!!</h1>
         <button
-          onClick={() => window.location.href = "/"}
+          onClick={() => {window.location.href = "/"}}
           className="coup-button create-button"
         >
           <span className="button-text">VOLTAR PARA O INÍCIO</span>

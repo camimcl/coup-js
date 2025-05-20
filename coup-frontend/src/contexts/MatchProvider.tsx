@@ -8,7 +8,7 @@ export interface Match {
   players: PlayerInfo[];
   hostUUID: string;
   inProgress: boolean;
-  winner?: PlayerInfo;
+  winner?: string;
 }
 
 interface MatchContextValue {

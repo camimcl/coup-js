@@ -24,7 +24,7 @@ export default class Match {
 
   private inProgress: boolean = false;
 
-  private winner: Player | null = null;
+  private winner: string | null = null;
 
   private hostUUID: string;
 
@@ -43,7 +43,7 @@ export default class Match {
     this.internalBus = internalBus;
     this.gameState = new GameState(internalBus, this.namespace, this.players);
 
-    this.internalBus.on(GAME_END, (winner: Player) => {
+    this.internalBus.on(GAME_END, (winner: string) => {
       this.winner = winner;
       this.hasEnded = true;
       this.inProgress = false;

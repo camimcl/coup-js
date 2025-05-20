@@ -69,10 +69,10 @@ export default class GameState {
       console.debug(`${this.players[0].name} won the match`);
 
       // Warns internal listeners that the match is over
-      this.internalBus.emit(GAME_END, this.players[0]);
+      this.internalBus.emit(GAME_END, this.players[0].name);
 
       // Warns clients that the match is over
-      this.namespace.emit(GAME_END, this.players[0]);
+      this.namespace.emit(GAME_END, this.players[0].name);
 
       return;
     }
