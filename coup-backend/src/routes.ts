@@ -74,4 +74,5 @@ app.post('/api/start-match/:id', (request: Request, response: Response) => {
   response.json({ message: `Started match ${match.getUUID()}` });
 });
 
+module.exports = app;
 export default httpServer;
