@@ -38,7 +38,6 @@ export default class Match {
   constructor(internalBus: EventEmitter, players: Player[], server: Server) {
     this.players = players;
     this.uuid = generateShortUUID();
-    console.log(`Type of uuid: ${typeof this.uuid}`)
     this.namespace = server.of(`/${this.uuid}`);
     this.hostUUID = players[0]?.uuid || '';
     this.internalBus = internalBus;

@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../public/')));
 
-const httpServer = http.createServer(app);
+export const httpServer = http.createServer(app);
 
 const server = new Server(httpServer, {
   cors: {
@@ -27,7 +27,7 @@ app.use(cors<Request>());
 
 const matches: { [key: string]: Match } = {};
 
-app.get('/', (_req: Request, res: Response) => {
+app.get('/health', (_req: Request, res: Response) => {
   res.json({ status: 'ok' });
 });
 
@@ -74,6 +74,4 @@ app.post('/api/start-match/:id', (request: Request, response: Response) => {
   response.json({ message: `Started match ${match.getUUID()}` });
 });
 
-module.exports = app;
-
-export default httpServer;
+module.exports = {app, httpServer};
