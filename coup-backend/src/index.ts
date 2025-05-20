@@ -1,4 +1,4 @@
-import httpServer from './routes.ts';
+import httpServer from './api/routes.ts';
 
 const PORT = process.env.PORT ?? 3000;
 

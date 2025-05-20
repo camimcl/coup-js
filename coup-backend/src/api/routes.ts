@@ -5,8 +5,8 @@ import path from 'path';
 import http from 'http';
 import { Server } from 'socket.io';
 import EventEmitter from 'events';
-import Match from './core/Match.ts';
-import initializeNamespace from './namespaceEvents.ts';
+import Match from '../core/Match.ts';
+import initializeNamespace from '../namespaceEvents.ts';
 
 const app = express();
 
@@ -75,4 +75,5 @@ app.post('/api/start-match/:id', (request: Request, response: Response) => {
 });
 
 module.exports = app;
+
 export default httpServer;
